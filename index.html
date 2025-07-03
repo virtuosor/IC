@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伊卡洛斯军械库 - 科技铸就未来，安全守护和平</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Light gray background */
+        }
+        /* Custom abstract background for hero section */
+        .hero-bg {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 50%, #2c3e50 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at top left, rgba(60, 100, 140, 0.3) 0%, transparent 70%),
+                        radial-gradient(circle at bottom right, rgba(60, 100, 140, 0.3) 0%, transparent 70%);
+            animation: subtle-pulse 10s infinite alternate;
+        }
+        @keyframes subtle-pulse {
+            0% { transform: scale(1); opacity: 0.8; }
+            100% { transform: scale(1.05); opacity: 1; }
+        }
+        /* Subtle glow for buttons */
+        .btn-glow {
+            box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+            transition: all 0.3s ease;
+        }
+        .btn-glow:hover {
+            box-shadow: 0 0 20px rgba(52, 152, 219, 0.8);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-gray-900 text-white shadow-lg py-4 px-6 md:px-12">
+        <nav class="container mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <img src="https://placehold.co/40x40/3498db/ffffff?text=I" alt="Icarus Logo" class="h-10 w-10 rounded-full mr-3">
+                <a href="#" class="text-2xl font-bold tracking-tight">伊卡洛斯军械库</a>
+            </div>
+
+            <!-- Navigation Menu -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#" class="hover:text-blue-400 transition duration-300">首页</a>
+                <a href="#about" class="hover:text-blue-400 transition duration-300">关于我们</a>
+                <a href="#tech" class="hover:text-blue-400 transition duration-300">技术与研发</a>
+                <a href="#products" class="hover:text-blue-400 transition duration-300">产品与服务</a>
+                <a href="#news" class="hover:text-blue-400 transition duration-300">新闻中心</a>
+                <a href="#contact" class="hover:text-blue-400 transition duration-300">联系我们</a>
+            </div>
+
+            <!-- Mobile Menu Button (Hamburger) -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="md:hidden hidden bg-gray-800 mt-4 rounded-lg shadow-md">
+            <a href="#" class="block px-6 py-3 text-white hover:bg-gray-700 rounded-lg transition duration-300">首页</a>
+            <a href="#about" class="block px-6 py-3 text-white hover:bg-gray-700 rounded-lg transition duration-300">关于我们</a>
+            <a href="#tech" class="block px-6 py-3 text-white hover:bg-gray-700 rounded-lg transition duration-300">技术与研发</a>
+            <a href="#products" class="block px-6 py-3 text-white hover:bg-gray-700 rounded-lg transition duration-300">产品与服务</a>
+            <a href="#news" class="block px-6 py-3 text-white hover:bg-gray-700 rounded-lg transition duration-300">新闻中心</a>
+            <a href="#contact" class="block px-6 py-3 text-white hover:bg-gray-700 rounded-lg transition duration-300">联系我们</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg py-24 md:py-36 text-white text-center rounded-b-3xl shadow-xl">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
+                砺炼新生，伊卡洛斯：<br class="hidden md:block">以创新定义责任。
+            </h1>
+            <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto opacity-90">
+                致力于推动科技前沿，为更安全、更负责任的世界贡献力量。
+            </p>
+            <a href="#about" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-10 rounded-full text-lg transition duration-300 btn-glow">
+                了解更多
+            </a>
+        </div>
+    </section>
+
+    <!-- Featured Modules Section -->
+    <section class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Module 1: Our Commitment -->
+                <div id="about" class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                    <img src="https://placehold.co/100x100/3498db/ffffff?text=承诺" alt="Commitment Icon" class="mx-auto mb-6 rounded-full">
+                    <h3 class="text-2xl font-semibold mb-4 text-center text-gray-900">我们的承诺</h3>
+                    <p class="text-gray-600 text-center">
+                        在变局中，伊卡洛斯坚守科技前沿与社会责任。我们致力于透明化运营，推动负责任的创新，为全球安全与稳定贡献力量。
+                    </p>
+                </div>
+
+                <!-- Module 2: Core Technologies -->
+                <div id="tech" class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                    <img src="https://placehold.co/100x100/2ecc71/ffffff?text=科技" alt="Technology Icon" class="mx-auto mb-6 rounded-full">
+                    <h3 class="text-2xl font-semibold mb-4 text-center text-gray-900">核心科技</h3>
+                    <p class="text-gray-600 text-center">
+                        考迪姆能源：驱动未来的无限可能。我们持续投入研发，探索考迪姆技术在民用、科研等领域的广泛应用潜力。
+                    </p>
+                </div>
+
+                <!-- Module 3: Sustainability & Partnerships -->
+                <div id="products" class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                    <img src="https://placehold.co/100x100/f1c40f/ffffff?text=合作" alt="Partnership Icon" class="mx-auto mb-6 rounded-full">
+                    <h3 class="text-2xl font-semibold mb-4 text-center text-gray-900">可持续发展与合作伙伴</h3>
+                    <p class="text-gray-600 text-center">
+                        共创未来：伊卡洛斯通过协作、革新与成长，与全球伙伴携手，致力于实现可持续发展和普惠科技。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News & Announcements Section -->
+    <section id="news" class="py-16 md:py-24 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">新闻中心</h2>
+            <div class="max-w-4xl mx-auto space-y-8">
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">伊卡洛斯董事会重申企业责任与合规运营</h4>
+                    <p class="text-gray-600 text-sm">2025年7月2日 - 在近期国际社会对军工企业责任的广泛讨论中，伊卡洛斯董事会发布声明，强调公司将继续秉持最高标准的合规与道德准则。</p>
+                    <a href="#" class="text-blue-600 hover:underline mt-2 inline-block">阅读更多</a>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">伊卡洛斯最新考迪姆能量存储技术取得突破</h4>
+                    <p class="text-gray-600 text-sm">2025年6月28日 - 研发团队在考迪姆能量存储效率方面取得了里程碑式的进展，为未来清洁能源应用奠定基础。</p>
+                    <a href="#" class="text-blue-600 hover:underline mt-2 inline-block">阅读更多</a>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">伊卡洛斯支持普雷西迪亚灾后重建人道主义救援</h4>
+                    <p class="text-gray-600 text-sm">2025年6月20日 - 伊卡洛斯军械库向普雷西迪亚灾区捐赠物资与技术支持，协助当地居民重建家园。</p>
+                    <a href="#" class="text-blue-600 hover:underline mt-2 inline-block">阅读更多</a>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">展望未来：伊卡洛斯启动下一代材料研究项目</h4>
+                    <p class="text-gray-600 text-sm">2025年6月15日 - 新项目旨在开发更轻、更坚固、更环保的复合材料，以应对未来科技挑战。</p>
+                    <a href="#" class="text-blue-600 hover:underline mt-2 inline-block">阅读更多</a>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block bg-gray-700 hover:bg-gray-800 text-white font-semibold py-3 px-8 rounded-full text-lg transition duration-300">
+                    查看所有新闻
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-900 text-white py-12 px-6 md:px-12 rounded-t-3xl shadow-inner">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- About Icarus -->
+            <div>
+                <h3 class="text-xl font-bold mb-4">伊卡洛斯军械库</h3>
+                <p class="text-gray-400 text-sm">
+                    伊卡洛斯军械库是全球领先的考迪姆能量技术与先进系统供应商，致力于推动科技进步，共创安全未来。
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-xl font-bold mb-4">快速链接</h3>
+                <ul class="space-y-2">
+                    <li><a href="#about" class="text-gray-400 hover:text-blue-400 transition duration-300">关于我们</a></li>
+                    <li><a href="#tech" class="text-gray-400 hover:text-blue-400 transition duration-300">技术与研发</a></li>
+                    <li><a href="#products" class="text-gray-400 hover:text-blue-400 transition duration-300">产品与服务</a></li>
+                    <li><a href="#news" class="text-gray-400 hover:text-blue-400 transition duration-300">新闻中心</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info & Social -->
+            <div>
+                <h3 class="text-xl font-bold mb-4">联系我们</h3>
+                <p class="text-gray-400 text-sm">地址：联邦核心区，西拉奇科技园（公共联络点）</p>
+                <p class="text-gray-400 text-sm">电话：+01 234 5678</p>
+                <p class="text-gray-400 text-sm">邮箱：info@icarus-arms.com</p>
+                <div class="flex space-x-4 mt-4">
+                    <a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300">
+                        <!-- Placeholder for Social Icon 1 -->
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm3.5 7.5c.828 0 1.5-.672 1.5-1.5S16.328 6.5 15.5 6.5 14 7.172 14 8s.672 1.5 1.5 1.5zm-7 0c.828 0 1.5-.672 1.5-1.5S9.328 6.5 8.5 6.5 7 7.172 7 8s.672 1.5 1.5 1.5zm3.5 6.5c-2.33 0-4.326-1.41-5.185-3.41-.096-.22-.047-.48.12-.66.167-.18.42-.23.64-.12.78.41 1.63.63 2.525.63s1.745-.22 2.525-.63c.22-.11.473-.06.64.12.167.18.216.44.12.66-.858 2-2.855 3.41-5.185 3.41z"/></svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300">
+                        <!-- Placeholder for Social Icon 2 -->
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15h-2V7h2v10zm4 0h-2V7h2v10zm4 0h-2V7h2v10z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500 text-sm">
+            &copy; 2025 伊卡洛斯军械库. 保留所有权利. | <a href="#" class="hover:underline">隐私政策</a> | <a href="#" class="hover:underline">法律声明</a>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
